@@ -6,14 +6,14 @@ Thank you for considering contributing to NetWhisper! We appreciate your interes
 
 - Make sure you have a GitHub account.
 - Fork the repository on GitHub.
-- Clone your forked repository: `git clone https://github.com/yourusername/netwhisper.git`
-- Navigate to the project directory: `cd netwhisper`
+- Clone your forked repository: `git clone https://github.com/3rr0r-505/KeySpy.git`
+- Navigate to the project directory: `cd KeySPy`
 
 ## Creating Issues
 
 If you find a bug, have a question, or want to suggest a new feature, you can create an issue on GitHub:
 
-1. Go to the [Issues](https://github.com/yourusername/netwhisper/issues) section.
+1. Go to the [Issues](https://github.com/3rr0r-505/KeySpy/issues) section.
 2. Click the "New Issue" button.
 3. Provide a descriptive title and detailed description.
 
