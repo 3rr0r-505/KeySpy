@@ -1,4 +1,4 @@
-<p align="center"><a href="https://github.com/3rr0r-505/NetWhisper"><img alt="" src="https://github.com/3rr0r-505/NetWhisper/blob/master/NetWhisper-cover.png?raw=true" width="100%"/></a></p>
+<p align="center"><a href="https://github.com/3rr0r-505/KeySpy"><img alt="" src="https://github.com/3rr0r-505/KeySpy/blob/main/KeySpy-cover.png?raw=true"  height="50%" width="100%"/></a></p>
 
 <p align="center"> 
 <a href="https://www.python.org/"><img alt="" src="https://img.shields.io/badge/python-3.9%2B-brighten?logo=python&label=pyhton&color=blue"/></a>
@@ -8,38 +8,34 @@
 <a href="https://www.microsoft.com/en-us/windows?r=1"><img alt="" src="https://img.shields.io/badge/OS-Windows-brighten?logo=windows&label=OS&labelColor=grey&color=blue"/></a><br>
 </p>
 
-# Roadmap for NetWhisper
+# Roadmap for KeySpy
 
 ### Introduction
-This document outlines the roadmap for NetWhisper, detailing our plans and goals for future development.
+This document outlines the roadmap for KeySpy, detailing our plans and goals for future development.
 
 ### Current Status
-At present, NetWhisper is in it's initial release [v1.0.0].
+At present, KeySpy is in it's initial phase.
 
-## Short-Term Goals
+## Future Goals
 - Goal 1:
   - **Name:** UI Improvement
-  - **Description:** Change the user input position to center and make that section symmetric. 
+  - **Description:** Make the Web Interface looks better. 
 
 - Goal 2:
-  - **Name:** Packet Count
-  - **Description:** If there's nothing mentioned in the ```Packet Count``` section, then it should scan and generate output continuously.
-  
-## Mid-Term Goals
-- Goal 1:
-  - **Name:** Integration with IDS/IPS
-  - **Description:** Integrate the packet sniffer with ```Intrusion Detection Systems (IDS)``` or ```Intrusion Prevention Systems (IPS)``` to enhance network security.
+  - **Name:** Auto-Start 
+  - **Description:** Start Automatically at the time of Turned On.
 
-- Goal 2:
-  - **Name:** Advanced Packet Analysis
-  - **Description:** Additional filters will be added to obtain a more precise output.
-  
-## Long-Term Vision
-Our long-term vision for **NetWhisper** is to make it more versetile: 
-  - **Tools Integration:** Tools Integration: Adding ```Wi-Fi Deauthenticator``` to NetWhisper.
-  - **Traffic Visualization:** Create ```Graphical Representations & Visualizations``` of network traffic trends, helping users understand network behavior more easily.
-  - **Performance Optimization:** Continuously improve the software's performance to handle high volumes of network traffic efficiently.
-  - **Cross-Platform Support:** Extend support for various operating systems and platforms to reach a broader user base.
+- Goal 3:
+  - **Name:** Rubber Ducky Integration 
+  - **Description:** Execute the Keylogger using `USB Rubber Ducky` along with disabling `Windows Realtime Protection`.
+
+ - Goal 4:
+   - **Name:** Payload Execution
+   - **Description:** Add a payload section in the Web Interface to remotely execute that on Target System.
+
+- Goal 5:
+  - **Name:** Ngrok Replacement
+  - **Description:** Replace Ngrok with a server to store the Keylog data and show the data in the Web Interface. 
 
 <!--## Upcoming Features
 - [Feature 1]
@@ -71,7 +67,7 @@ Our long-term vision for **NetWhisper** is to make it more versetile:
 ... -->
 
 ## Community Involvement
-We welcome community involvement in shaping the future of NetWhisper. If you'd like to contribute, please see our [Contribution Guidelines](https://github.com/3rr0r-505/NetWhisper/blob/master/CONTRIBUTING.md).
+We welcome community involvement in shaping the future of NetWhisper. If you'd like to contribute, please see our [Contribution Guidelines](https://github.com/3rr0r-505/KeySpy/blob/master/CONTRIBUTING.md).
 
 ## Contributions Welcome
 We encourage contributions from the community and value your input. If you have ideas or suggestions, please open an issue or submit a pull request.
