@@ -35,12 +35,15 @@ KeySpy is a simple Python keylogger with a web interface for viewing captured ke
    pip install -r requirements.txt
 
 ## Usage
-1.  Run the `weblogger.py` script to start the keylogger and web interface:
+1. Navigate to the src directory:
+   ```bash
+   cd src
+2.  Run the `weblogger.py` script to start the keylogger and web interface:
     ```bash
-     python weblogger.py
-2. Access the web interface in your browser by visiting `ngrok link` sent to the mail. `Change the sender and reciver mail in mailink.py`
+    python weblogger.py
+3. Access the web interface in your browser by visiting `ngrok link` sent to the mail. `Change the sender and reciver mail in mailink.py`
 
-3. View the captured keystrokes in real-time on the web interface.
+4. View the captured keystrokes in real-time on the web interface.
 
 ## Note
 
