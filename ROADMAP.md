@@ -26,7 +26,7 @@ At present, KeySpy is in it's initial phase.
   - **Description:** Start Automatically at the time of Turned On.
 
 - Goal 3:
-  - **Name:** Rubber Ducky Integration 
+  - **Name:** Rubber Ducky Integration [✔️Done]
   - **Description:** Execute the Keylogger using `USB Rubber Ducky` along with disabling `Windows Realtime Protection`.
 
  - Goal 4:
