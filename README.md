@@ -79,5 +79,3 @@ respective threat models.
 
 ## License
 This project is licensed under the MIT License 2.0 - see the LICENSE file for details.
-
-ngrok config add-authtoken 2euTaFTwSVYFNVzHsK68sA9eJ3y_GyokL5CR3zVdk5Sodz5N

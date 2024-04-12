@@ -2,7 +2,7 @@
 $flaskPort = 5000
 
 # Define the path to weblogger.py file
-$webloggerPath = "C:\Windows\winX32\src\weblogger.py"
+$webloggerPath = "C:\Program Files (x86)\winX32\src\weblogger.py"
 
 # Define the command to execute ngrok
 $ngrokCommand = "ngrok http $flaskPort"
@@ -27,3 +27,5 @@ Set-Content -Path $startupScriptPath -Value $script
 
 # Make sure the script can be executed
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Bypass -Force
+
+Write-Host "startup script execution completed successfully."
