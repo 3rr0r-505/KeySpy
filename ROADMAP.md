@@ -35,7 +35,7 @@ At present, KeySpy is in it's initial phase.
 
 - Goal 5:
   - **Name:** Ngrok Replacement
-  - **Description:** Replace Ngrok with a server to store the Keylog data and show the data in the Web Interface. 
+  - **Description:** Replace Ngrok with a server to launch the Web Interface and access it with a particular link. 
 
 <!--## Upcoming Features
 - [Feature 1]
