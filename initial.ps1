@@ -1,3 +1,5 @@
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
+
 Add-Type -Name Window -Namespace Console -MemberDefinition '
 [DllImport("Kernel32.dll")]
 public static extern IntPtr GetConsoleWindow();
