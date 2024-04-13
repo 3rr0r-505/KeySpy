@@ -52,7 +52,8 @@ def execute_command(command):
         print("Error executing command:", e)
 
 def execute_payload():
-    file_path = os.path.join(os.path.dirname(__file__), 'payload.txt')
+    current_directory = os.path.dirname(os.path.realpath(__file__))
+    file_path = os.path.join(current_directory, 'payload.txt')
     with open(file_path, 'r') as file:
         for line in file:
             execute_command(line.strip())

