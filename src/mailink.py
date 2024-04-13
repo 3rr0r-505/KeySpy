@@ -11,8 +11,10 @@ def get_flask_link():
         return None
 
 def send_email(receiver_email, link):
-    sender_email = "<fake@mail.com>"  # Replace with your email address
-    sender_password = "<FakePassword>"  # Replace with your email password
+    # sender_email = "<fake@mail.com>"  # Replace with your email address
+    # sender_password = "<FakePassword>"  # Replace with your email password
+    sender_email = "1nc0gn1t0.5pyd@gmail.com"
+    sender_password = "dgbqjdxzybssamqv"
 
     msg = MIMEText(f"Link to Flask application: {link}")
     msg['Subject'] = "Flask Application Link"
@@ -32,7 +34,8 @@ def send_email(receiver_email, link):
 if __name__ == '__main__':
     flask_link = get_flask_link()
     if flask_link:
-        receiver_email = "<getmail@mail.com>"  # Replace with recipient's email address
+        #receiver_email = "<getmail@mail.com>"  # Replace with recipient's email address
+        receiver_email = "lucifer.gaming.1913@gmail.com"  # Replace with recipient's email address
         send_email(receiver_email, flask_link)
     else:
         print("Flask link not available.")
