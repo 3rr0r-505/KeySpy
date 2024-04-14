@@ -26,11 +26,11 @@ At present, KeySpy is in it's initial phase.
   - **Description:** Start Automatically at the time of Turned On.
 
 - Goal 3:
-  - **Name:** Rubber Ducky Integration [✔️Done]
+  - **Name:** Rubber Ducky Integration 
   - **Description:** Execute the Keylogger using `USB Rubber Ducky` along with disabling `Windows Realtime Protection`.
 
  - Goal 4:
-   - **Name:** Payload Execution
+   - **Name:** Payload Execution [✔️Done]
    - **Description:** Add a payload section in the Web Interface to remotely execute that on Target System.
 
 - Goal 5:
