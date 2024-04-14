@@ -18,7 +18,7 @@ At present, KeySpy is in it's initial phase.
 
 ## Future Goals
 - Goal 1:
-  - **Name:** UI Improvement
+  - **Name:** UI Improvement [✔️Done]
   - **Description:** Make the Web Interface looks better. 
 
 - Goal 2:
