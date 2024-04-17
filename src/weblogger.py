@@ -5,8 +5,6 @@ import os
 import sys
 import time
 import datetime
-import keylogger
-import mailink
 
 app = Flask(__name__, template_folder=os.path.dirname(os.path.abspath(__file__)))
 
