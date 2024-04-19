@@ -50,3 +50,6 @@ A Browser Extension to detect the site and key strokes, store the data in mongoD
   - **Name:** Field Detection
   - **Description:** Detect the fields of the sites and show in output; eg. `http://test.com [TimeStamp]> username: FakeUser`
 
+- Goal 3:
+  - **Name:** CRX file
+  - **Description:** create a crx file to just click n install the extension
