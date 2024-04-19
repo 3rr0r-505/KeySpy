@@ -37,3 +37,16 @@ A Browser Extension to detect the site and key strokes, store the data in mongoD
         cd KeySpy/W3bSpy/W3bSpy-Server
         npm install express mongoose
         node server.js
+## Future Goals
+- Goal 1:
+  - **Name:** Web implementation
+  - **Description:** Show the mongoDB data in KeySpy Web Interface
+
+- Goal 2:
+  - **Name:** UI Improvement
+  - **Description:** Show the data more precisely in a better format eg. `http://test.com [TimeStamp]> keylog`
+
+- Goal 3:
+  - **Name:** Field Detection
+  - **Description:** Detect the fields of the sites and show in output; eg. `http://test.com [TimeStamp]> username: FakeUser`
+
