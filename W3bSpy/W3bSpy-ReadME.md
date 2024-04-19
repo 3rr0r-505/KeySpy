@@ -34,9 +34,9 @@ A Browser Extension to detect the site and key strokes, store the data in mongoD
    - Setting up the server:
       - Install dependencies and start the server:
         ```bash
-        cd KeySpy/W3bSpy/W3bSpy-Server
-        npm install express mongoose
-        node server.js
+           cd KeySpy/W3bSpy/W3bSpy-Server
+           npm install express mongoose
+           node server.js
 ## Future Goals
 - Goal 1:
   - **Name:** Web implementation
