@@ -117,6 +117,9 @@
                     <li class="nav-item">
                         <a class="nav-link active" id="keylog-tab" data-toggle="tab" href="#keylog">KEYLOG</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="browserlog-tab" data-toggle="tab" href="#browserlog">BROWSERLOG</a>
+                    </li>
                 </ul>
             </div>
             <div class="tab-content">
@@ -138,6 +141,19 @@
                         <ul class="list-group">
                             {% for log in logs %}
                                 <li class="list-group-item">{{ log }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="browserlog">
+                    <h2 class="text-center">BrowserLog Output</h2>
+                    <div class="pdng">
+                        <ul class="list-group">
+                            {% for keystroke in keystrokes %}
+                                <li class="list-group-item">{{ keystroke }}</li>
+                            {% endfor %}
+                            {% for site in sites %}
+                                <li class="list-group-item">{{ site }}</li>
                             {% endfor %}
                         </ul>
                     </div>

