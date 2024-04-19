@@ -12,7 +12,7 @@
 
 KeySpy is a simple Python keylogger with a web interface for viewing captured keystrokes in real-time.
 
-## W3bSpy
+## W3bSpy - Browser Extension of KeySpy
 
 A Browser Extension to detect the site and key strokes, store the data in mongoDB server.
 
