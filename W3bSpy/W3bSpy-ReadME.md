@@ -44,7 +44,7 @@ A Browser Extension to detect the site and key strokes, store the data in mongoD
 
 - Goal 2:
   - **Name:** UI Improvement
-  - **Description:** Show the data more precisely in a better format eg. `http://test.com [TimeStamp]> keylog`
+  - **Description:** Show the data more precisely in a better format; eg. `http://test.com [TimeStamp]> keylog`
 
 - Goal 3:
   - **Name:** Field Detection
