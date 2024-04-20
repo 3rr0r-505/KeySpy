@@ -14,6 +14,5 @@
       "matches": ["<all_urls>"],
       "js": ["content.js"]
     }
-  ],
-  "key": "key.pem"
+  ]
 }
