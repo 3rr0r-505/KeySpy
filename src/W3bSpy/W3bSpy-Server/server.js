@@ -6,6 +6,9 @@ app.use(express.json());
 
 // Connect to MongoDB.
 mongoose.connect('mongodb://localhost:27017/keylogger', { useNewUrlParser: true, useUnifiedTopology: true });
+
+/*mongoose.connect('mongodb://MONGODB_SERVER_IP_OR_DOMAIN:27017/keylogger', { useNewUrlParser: true, useUnifiedTopology: true }); => Update this URL  to work beyond localhost */
+
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 

