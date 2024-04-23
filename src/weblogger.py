@@ -23,8 +23,6 @@ keylogs = []  # List to store keylogs
 # MongoDB connection
 client = pymongo.MongoClient("mongodb://localhost:27017/")
 db = client["keylogger"]
-# keystroke_collection = db["keystrokes"]
-# site_collection = db["sites"]
 site_logs_collection = db["logs"]
 
 
