@@ -1,0 +1,973 @@
+KeyLogger Started...
+
+
+ Key.ctrl_l 
+
+
+ Key.ctrl_l 
+
+
+
+
+
+
+
+
+ Key.shift_r 
+"
+ Key.backspace 
+ Key.left 
+ Key.left 
+ Key.left 
+ Key.left 
+ Key.backspace 
+
+
+ Key.up 
+
+ Key.right 
+ Key.backspace 
+ Key.backspace 
+ Key.ctrl_l 
+
+
+ Key.enter 
+KeyLogger Started...
+
+ Key.cmd 
+ Key.cmd 
+r
+r
+n
+n
+o
+o
+t
+t
+e
+e
+p
+p
+a
+a
+d
+d
+ Key.enter 
+ Key.enter 
+ Key.shift 
+H
+H
+ Key.shift 
+ Key.shift 
+e
+l
+l
+l
+l
+o
+o
+SPACE
+SPACE
+f
+f
+r
+r
+o
+o
+m
+m
+SPACE
+SPACE
+ Key.shift 
+ Key.shift 
+R
+R
+ Key.shift 
+ Key.shift 
+u
+b
+b
+b
+e
+e
+r
+r
+SPACE
+SPACE
+ Key.shift 
+D
+ Key.shift 
+u
+u
+c
+c
+k
+k
+y
+y
+ Key.shift 
+ Key.shift 
+!
+!
+ Key.shift 
+ Key.alt_l 
+f
+f
+a
+ Key.shift 
+%
+%
+ Key.shift 
+ Key.shift 
+ Key.shift 
+ Key.shift 
+U
+U
+ Key.shift 
+ Key.shift 
+ Key.shift 
+ Key.shift 
+S
+S
+ Key.shift 
+ Key.shift 
+ Key.shift 
+E
+E
+ Key.shift 
+ Key.shift 
+ Key.shift 
+ Key.shift 
+R
+R
+ Key.shift 
+ Key.shift 
+ Key.shift 
+ Key.shift 
+P
+P
+ Key.shift 
+ Key.shift 
+ Key.shift 
+ Key.shift 
+R
+R
+ Key.shift 
+ Key.shift 
+ Key.shift 
+ Key.shift 
+O
+O
+ Key.shift 
+ Key.shift 
+ Key.shift 
+F
+F
+ Key.shift 
+ Key.shift 
+ Key.shift 
+ Key.shift 
+I
+I
+ Key.shift 
+ Key.shift 
+ Key.shift 
+ Key.shift 
+L
+L
+ Key.shift 
+ Key.shift 
+ Key.shift 
+ Key.shift 
+E
+E
+ Key.shift 
+ Key.shift 
+ Key.shift 
+%
+%
+ Key.shift 
+ Key.shift 
+\
+\
+ Key.shift 
+ Key.shift 
+D
+D
+ Key.shift 
+ Key.shift 
+e
+e
+s
+s
+k
+k
+t
+t
+o
+o
+p
+p
+\
+\
+ Key.shift 
+ Key.shift 
+R
+R
+ Key.shift 
+u
+u
+b
+b
+b
+b
+e
+e
+r
+r
+ Key.shift 
+ Key.shift 
+D
+D
+ Key.shift 
+ Key.shift 
+u
+u
+c
+c
+k
+k
+y
+y
+ Key.shift 
+ Key.shift 
+N
+N
+ Key.shift 
+ Key.shift 
+o
+t
+t
+e
+.
+.
+t
+t
+x
+x
+t
+t
+ Key.enter 
+ Key.enter 
+
+
+
+
+ Key.delete 
+ Key.delete 
+
+
+
+
+
+
+u
+u
+s
+e
+e
+r
+r
+n
+n
+a
+a
+m
+m
+e
+ Key.enter 
+p
+p
+a
+s
+s
+s
+w
+
+o
+o
+r
+r
+d
+d
+
+ Key.enter 
+ Key.enter 
+a
+a
+d
+d
+m
+m
+i
+n
+n
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+i
+i
+t
+t
+
+'
+s
+SPACE
+
+r
+r
+u
+n
+n
+n
+i
+i
+n
+n
+g
+SPACE
+t
+h
+h
+e
+e
+SPACE
+m
+m
+o
+n
+g
+g
+o
+o
+-
+-
+s
+s
+a
+a
+v
+v
+e
+SPACE
+a
+n
+n
+d
+d
+SPACE
+SPACE
+m
+m
+
+o
+o
+n
+n
+g
+o
+o
+
+-
+-
+r
+r
+e
+e
+t
+r
+i
+i
+e
+v
+v
+e
+e
+SPACE
+SPACE
+d
+ Key.backspace 
+ Key.backspace 
+f
+i
+i
+l
+l
+e
+e
+SPACE
+SPACE
+f
+f
+o
+o
+r
+r
+SPACE
+SPACE
+j
+j
+u
+u
+s
+s
+t
+t
+SPACE
+o
+o
+n
+c
+c
+e
+ Key.enter 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+c
+c
+a
+a
+SPACE
+ Key.backspace 
+n
+SPACE
+i
+i
+SPACE
+u
+u
+s
+s
+e
+SPACE
+i
+i
+n
+n
+f
+f
+i
+n
+n
+i
+i
+t
+t
+e
+e
+SPACE
+
+f
+
+o
+o
+r
+r
+SPACE
+SPACE
+l
+l
+o
+o
+o
+p
+p
+SPACE
+i
+i
+n
+n
+SPACE
+t
+h
+o
+s
+s
+e
+SPACE
+SPACE
+f
+f
+i
+l
+l
+e
+s
+s
+SPACE
+t
+t
+o
+o
+SPACE
+SPACE
+r
+r
+u
+u
+n
+n
+SPACE
+SPACE
+
+t
+h
+h
+a
+a
+t
+t
+
+ Key.backspace 
+ Key.backspace 
+ Key.backspace 
+e
+m
+m
+SPACE
+SPACE
+c
+c
+o
+n
+t
+t
+i
+n
+n
+e
+e
+u
+u
+o
+o
+s
+s
+l
+l
+y
+y
+ Key.enter 
+ Key.enter 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Key.ctrl_l 
+
+ Key.ctrl_l 
+ Key.ctrl_l 
+
+ Key.enter 
+
+
+ Key.ctrl_l 
+
+
+
+
+
+
+
+
+ Key.enter 
+ Key.ctrl_l 
+
+
+ Key.ctrl_l 
+
+
+ Key.ctrl_l 
+
+ Key.tab 
+
+
+
+ Key.ctrl_l 
+
+
+
+ Key.ctrl_l 
+
+ Key.enter 
+ Key.ctrl_l 
+
+
+ Key.backspace 
+ Key.ctrl_l 
+ Key.ctrl_l 
+ Key.ctrl_l 
+
+
+ Key.ctrl_l 
+
+ Key.ctrl_l 
+
+ Key.tab 
+
+ Key.tab 
+ Key.backspace 
+
+ Key.backspace 
+ Key.down 
+ Key.down 
+ Key.up 
+ Key.backspace 
+ Key.backspace 
+ Key.ctrl_l 
+ Key.ctrl_l 
+
+ Key.backspace 
+ Key.backspace 
+
+ Key.ctrl_l 
+ Key.ctrl_l 
+ Key.ctrl_l 
+ Key.ctrl_l 
+ Key.ctrl_l 
+
+
+
+
+
+
+
+
+
+
+
+
+ Key.up 
+ Key.enter 
+KeyLogger Started...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Key.ctrl_l 
+ Key.ctrl_l 
+
+
+ Key.cmd 
+ Key.cmd 
+r
+r
+n
+o
+o
+t
+t
+e
+e
+p
+p
+a
+a
+d
+d
+ Key.enter 
+ Key.shift 
+ Key.shift 
+H
+H
+ Key.shift 
+ Key.shift 
+e
+e
+l
+l
+l
+l
+o
+o
+SPACE
+f
+f
+r
+r
+o
+m
+m
+SPACE
+ Key.shift 
+ Key.shift 
+R
+R
+ Key.shift 
+u
+u
+b
+b
+b
+b
+e
+e
+r
+r
+SPACE
+ Key.shift 
+ Key.shift 
+D
+D
+ Key.shift 
+ Key.shift 
+u
+u
+c
+c
+k
+k
+y
+y
+ Key.shift 
+ Key.shift 
+!
+!
+ Key.shift 
+ Key.shift 
+ Key.alt_l 
+ Key.alt_l 
+f
+f
+a
+ Key.shift 
+%
+%
+ Key.shift 
+ Key.shift 
+ Key.shift 
+ Key.shift 
+U
+U
+ Key.shift 
+ Key.shift 
+ Key.shift 
+ Key.shift 
+S
+S
+ Key.shift 
+ Key.shift 
+E
+E
+ Key.shift 
+ Key.shift 
+ Key.shift 
+ Key.shift 
+R
+R
+ Key.shift 
+ Key.shift 
+ Key.shift 
+ Key.shift 
+P
+ Key.shift 
+ Key.shift 
+ Key.shift 
+ Key.shift 
+R
+R
+ Key.shift 
+ Key.shift 
+ Key.shift 
+ Key.shift 
+O
+O
+ Key.shift 
+ Key.shift 
+ Key.shift 
+F
+F
+ Key.shift 
+ Key.shift 
+ Key.shift 
+ Key.shift 
+I
+I
+ Key.shift 
+ Key.shift 
+ Key.shift 
+L
+L
+ Key.shift 
+ Key.shift 
+ Key.shift 
+ Key.shift 
+E
+E
+ Key.shift 
+ Key.shift 
+ Key.shift 
+ Key.shift 
+%
+%
+ Key.shift 
+ Key.shift 
+\
+\
+ Key.shift 
+ Key.shift 
+D
+D
+ Key.shift 
+ Key.shift 
+e
+e
+s
+s
+k
+k
+t
+t
+o
+o
+p
+p
+\
+\
+ Key.shift 
+ Key.shift 
+R
+R
+ Key.shift 
+ Key.shift 
+u
+u
+b
+b
+b
+b
+e
+e
+r
+r
+ Key.shift 
+ Key.shift 
+D
+ Key.shift 
+ Key.shift 
+u
+u
+c
+c
+k
+k
+y
+y
+ Key.shift 
+ Key.shift 
+N
+N
+ Key.shift 
+ Key.shift 
+o
+o
+t
+t
+e
+e
+.
+.
+t
+t
+x
+x
+t
+t
+ Key.enter 
+ Key.enter 
+
+
+ Key.ctrl_l 
+ Key.ctrl_l 
+
+
+
+
+
+
+
+
