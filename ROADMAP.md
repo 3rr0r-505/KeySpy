@@ -18,24 +18,27 @@ At present, KeySpy is in it's initial phase.
 
 ## Future Goals
 - Goal 1:
-  - **Name:** UI Improvement [✔️Done]
-  - **Description:** Make the Web Interface looks better. 
-
+  - **Name:** UI Improvement
+  - **Description:** Make the Web Interface looks better.
 - Goal 2:
+  - **Name:** W3b Server Implement
+  - **Description:** Use a web server for the flask Web Interface.  
+
+- Goal 3:
   - **Name:** Auto-Start 
   - **Description:** Start Automatically at the time of Turned On.
 
-- Goal 3:
+- Goal 4:
   - **Name:** Rubber Ducky Integration 
   - **Description:** Execute the Keylogger using `USB Rubber Ducky` along with disabling `Windows Realtime Protection`.
 
- - Goal 4:
-   - **Name:** Payload Execution [✔️Done]
-   - **Description:** Add a payload section in the Web Interface to remotely execute that on Target System.
-
-- Goal 5:
-  - **Name:** Ngrok Replacement
-  - **Description:** Replace Ngrok with a server to launch the Web Interface and access it with a particular link. 
+ - Goal 5:
+   - **Name:** AIO .exe
+   - **Description:** create a single exe file containing all the necessary modules and packages.
+  
+ - Goal 6:
+   - **Name:** X-platform Compatibility
+   - **Description:** Implementing Cross-platform compatibility for `Windows`, `macOS` & `Linux`.
 
 <!--## Upcoming Features
 - [Feature 1]
