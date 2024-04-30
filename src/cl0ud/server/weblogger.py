@@ -32,13 +32,12 @@ def save_payload():
     if request.method == 'POST':
         payload_data = request.form['payload']
         save_payload_to_db(payload_data)
-    return redirect(url_for('home'))
+    return redirect(request.referrer)
 
 def save_payload_to_db(payload_data):
     payload_document = {"text": payload_data}
     payload_collection.insert_one(payload_document)
 
-
 if __name__ == '__main__':
-    # app.run(host='127.0.0.1', port=8000) #for localhost
-    app.run(host='0.0.0.0')
+    app.run(host='127.0.0.1', port=8000) #for localhost
+    # app.run(host='0.0.0.0')
