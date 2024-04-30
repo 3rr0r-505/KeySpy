@@ -40,12 +40,20 @@ A Browser Extension to detect the site and key strokes, store the data in mongoD
 ## Future Goals
 - Goal 1:
   - **Name:** Replace Server.js
-  - **Description:** Use separate server or mongoDB Realm to run server.js 24/7
+  - **Description:** Use separate server or mongoDB Realm to run server.js 24/7.
 
 - Goal 2:
-  - **Name:** Field Detection
-  - **Description:** Detect the fields of the sites and show in output; eg. `http://test.com [TimeStamp]> username: FakeUser`
+  - **Name:** Improve UI
+  - **Description:** use html file for improved UI of the extension.
 
 - Goal 3:
+  - **Name:** Field Detection
+  - **Description:** Detect the fields of the sites and show in output; eg. `http://test.com [TimeStamp]> username: FakeUser`.
+
+- Goal 4:
   - **Name:** CRX file
-  - **Description:** create a crx file to just click n install the extension
+  - **Description:** create a crx file & host it to just click n install the extension.
+
+- Goal 5:
+  - **Name:** Add to Chrome Web Store 
+  - **Description:** Add the extension to chrome web store to add it in the browser quickly and easily.
