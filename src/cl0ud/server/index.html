@@ -26,26 +26,31 @@
                 padding: 5px;
                 border-radius: 5px;
             }
-            
+
             .logo-container {
                 display: flex;
                 align-items: center;
                 justify-content: center;
             }
-            
+
             .logo-text {
                 font-family: Arial, Helvetica, sans-serif;
                 color: white;
                 font-size: 30px;
                 font-weight: bold;
-                margin-left: 10px; /* Adjust this margin as needed */
+                margin-left: 3px; /* Adjust this margin as needed */
             }
-            
 
-            .nav-item{
+            .nav-item {
                 font-size: 20px;
                 font-weight: bold;
                 font-family: Arial, Helvetica, sans-serif;
+                margin:5px;
+            }
+
+            .nav-item:hover{
+                background-color: #a5a7a9e0;
+                border-color: hsl(211, 99%, 62%);
             }
 
             .nav-link {
@@ -62,7 +67,7 @@
                 background-color: hsl(0, 1%, 17%);
             }
 
-            .pdng{
+            .pdng {
                 padding: 10px;
             }
 
@@ -74,19 +79,19 @@
 
             .form-control {
                 background-color: #333;
-                color: hsl(127, 83%, 50%)  !important;
-                border: 1px solid #666  !important;
+                color: hsl(127, 83%, 50%) !important;
+                border: 1px solid #666 !important;
                 font-size: 25px;
                 font-weight: bold;
                 padding: 10px;
             }
 
-            #payloadInput{
+            #payloadInput {
                 background-color: black !important;
                 border-radius: 10px;
             }
 
-            .list-group{
+            .list-group {
                 color: black;
             }
 
@@ -99,16 +104,36 @@
                 background-color: #0056b3;
                 border-color: #0056b3;
             }
+
+            #refresh-btn{
+                margin-left: 7px;
+                font-weight: bold;
+                background-color: hsla(232, 80%, 72%, 0.95);
+            }
+
+            #timer-clk{
+                margin-right: 7px;
+                font-weight: bold;
+            }
         </style>
     </head>
     <body>
         <div class="container">
+            <!--Top header section-->
             <div class="header-section">
-                <div class="logo-container">
-                    <img src="https://raw.githubusercontent.com/3rr0r-505/KeySpy/main/img/KeySpy-logo.png" alt="Logo" height="75px" align-item="left">
-                    <span class="logo-text">KeySpy</span>
+                <div class="d-flex justify-content-between align-items-center">
+                    <!-- Left side: Refresh button -->
+                    <button class="btn btn-outline-light" id="refresh-btn" onclick="refreshOutput()">Refresh</button>
+                    <!-- KeySpy heading and logo -->
+                    <div class="logo-container">
+                        <img src="https://raw.githubusercontent.com/3rr0r-505/KeySpy/main/img/KeySpy-logo.png" alt="Logo" height="75px" align-item="left">
+                        <span class="logo-text">KeySpy</span>
+                    </div>
+                    <!-- Right side: Timer -->
+                    <div class="text-white" id="timer-clk">Timer: <span id="timer">30</span> seconds</div>
                 </div>
             </div>
+            <!--Tab section-->
             <div class="header-section">
                 <ul class="nav nav-tabs justify-content-center">
                     <li class="nav-item">
@@ -122,6 +147,7 @@
                     </li>
                 </ul>
             </div>
+            <!--output section-->
             <div class="tab-content">
                 <div class="tab-pane fade" id="payload">
                     <h2 class="text-center">Payload Input</h2>
@@ -137,20 +163,20 @@
                 </div>
                 <div class="tab-pane fade show active" id="keylog">
                     <h2 class="text-center">Keylogger Output</h2>
-                    <div class="pdng">
+                    <div class="pdng" id="keylog-content">
                         <ul class="list-group">
                             {% for log in logs %}
-                                <li class="list-group-item">{{ log }}</li>
+                            <li class="list-group-item">{{ log }}</li>
                             {% endfor %}
                         </ul>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="browserlog">
                     <h2 class="text-center">BrowserLog Output</h2>
-                    <div class="pdng">
+                    <div class="pdng" id="browserlog-content">
                         <ul class="list-group">
                             {% for log in site_logs %}
-                                <li class="list-group-item">{{ log }}</li>
+                            <li class="list-group-item">{{ log }}</li>
                             {% endfor %}
                         </ul>
                     </div>
@@ -162,6 +188,47 @@
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!--Custom JS-->
+        <script>
+            // Function to refresh the output section
+        // Function to refresh the output section
+        function refreshOutput() {
+            // Fetch updated data for each tab section using AJAX
+            $.ajax({
+                type: "GET",
+                url: "{{ url_for('home') }}", // Endpoint to fetch updated data
+                success: function (data) {
+                    // Update Keylog tab content
+                    $('#keylog-content').html($(data).find('#keylog-content').html());
+                    // Update Browserlog tab content
+                    $('#browserlog-content').html($(data).find('#browserlog-content').html());
+                }
+            });
+        }
+
+            // Timer countdown function
+            function startTimer(duration, display) {
+                var timer = duration;
+                setInterval(function () {
+                    var seconds = parseInt(timer % 60, 10);
+
+                    seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                    display.textContent = seconds;
+
+                    if (--timer < 0) {
+                        timer = duration; // Reset timer to original duration
+                    }
+                }, 1000);
+            }
+
+            // Start the timer when the page loads
+            window.onload = function () {
+                var display = document.getElementById("timer");
+                startTimer(30, display); // Start from 30 seconds
+            };
+        </script>
     </body>
 </html>
-
