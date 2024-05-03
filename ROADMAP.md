@@ -40,6 +40,7 @@ At present, KeySpy is in it's initial phase.
    - **Name:** X-platform Compatibility
    - **Description:** Implementing Cross-platform compatibility for `Windows`, `macOS` & `Linux`.
 
+⚙️`Note:` To know current Developments; Visit [DEV-ToDo.md](https://github.com/3rr0r-505/KeySpy/blob/master/D3V-ToDo.md). 
 <!--## Upcoming Features
 - [Feature 1]
   - Description: [Provide a brief description of the feature]
@@ -79,5 +80,5 @@ We encourage contributions from the community and value your input. If you have 
 We appreciate your feedback on our roadmap. If you have any comments or questions, please don't hesitate to reach out to us.
 
 ## Conclusion
-Thank you for your interest in NetWhisper. We are excited about the future and look forward to working together to make it a success!
+Thank you for your interest in KeySpy. We are excited about the future and look forward to working together to make it a success!
 
