@@ -1,4 +1,4 @@
-# Contributing to NetWhisper
+# Contributing to KeySpy
 
 Thank you for considering contributing to NetWhisper! We appreciate your interest in making our project better.
 
