@@ -42,6 +42,7 @@ KeySpy is a simple Python keylogger with a web interface for viewing captured ke
    - Connect the USB Rubber Ducky to the target machine at least 30 seconds.
    - It will run KeySpy on that machine.
    ### 🕸️Web Extension:
+   - Download the extension zip file [extn.zip](https://github.com/3rr0r-505/WebSpy/raw/main/extn.zip) and extract the zip file.
    - Open the Browser.
    - Search this link `chrome://extensions/`.
    - Click on `Load Unpack`.
