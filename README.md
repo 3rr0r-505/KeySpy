@@ -19,9 +19,10 @@ KeySpy is a simple Python keylogger with a web interface for viewing captured ke
 ## Features
 
 - Captures keystrokes in the background while running.
-- Stores captured keystrokes in a `keylogs.txt` file.
+- Stores captured keystrokes in `mongoDB Atlas`.
 - Displays captured keystrokes in a web interface using Flask.
-- Automatically starts the keylogger and web interface upon running the `weblogger.py` script.
+- Excute Payloads remotely.
+- Capture sites and keystrokes in them using a extension.
 - Allows viewing keystrokes from multiple sessions.
 
 ## Installation
