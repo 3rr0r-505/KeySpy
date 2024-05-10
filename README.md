@@ -49,7 +49,7 @@ KeySpy is a simple Python keylogger with a web interface for viewing captured ke
    - Add .extn folder. `[For more info, visit]` [WebSpy](https://github.com/3rr0r-505/WebSpy).
     
 ### 🌐Web Interface:
-   - Install [W3Blogger.exe](https://github.com/3rr0r-505/KeySpy/raw/main/exe/W3Blogger/W3Blogger_v1.1.exe) and launch it.
+   - Visit this site [w3blogger.onrender.com](https://w3blogger.onrender.com/) to monitor the keylogs and execute payloads remotely
    
 
 ## Note
