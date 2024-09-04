@@ -14,7 +14,7 @@
 
 # KeySpy - Remote Keylogger Tool
 
-KeySpy is a simple Python keylogger with a web interface for viewing captured keystrokes in real-time.
+KeySpy is a Python keylogger with a web interface for viewing captured keystrokes and executing payloads remotely in real-time.
 
 ## Features
 
