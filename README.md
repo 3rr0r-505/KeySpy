@@ -5,9 +5,11 @@
 &nbsp;
 <a href="https://flask.palletsprojects.com/en/3.0.x/"><img alt="" src="https://img.shields.io/badge/Flask-v3.0.3-45aec2?logo=flask&logoColor=45aec2"/></a>
 &nbsp;
-<a href="https://nodejs.org/en"><img alt="" src="https://img.shields.io/badge/Node.js-v16.4.0-339933?logo=node.js"/></a>
-&nbsp;
+<!--<a href="https://nodejs.org/en"><img alt="" src="https://img.shields.io/badge/Node.js-v16.4.0-339933?logo=node.js"/></a>
+&nbsp;-->
 <a href="https://www.mongodb.com/"><img alt="" src="https://img.shields.io/badge/MongoDB%20Atlas-v4.4.6-009441?logo=mongodb&logoColor=009441"/></a>
+&nbsp;
+<a href="https://vercel.com"><img alt="" src="https://img.shields.io/badge/Deployed%20with-Vercel-black?logo=vercel"/></a>
 &nbsp;
 <a href="https://www.microsoft.com/en-us/windows?r=1"><img alt="" src="https://img.shields.io/badge/OS-Windows-brighten?logo=windows&logoColor=blue&label=OS&labelColor=grey&color=blue"/></a><br>
 </p>
@@ -20,12 +22,13 @@ KeySpy is a Python keylogger with a web interface for viewing captured keystroke
 
 - Captures keystrokes in the background while running.
 - Stores captured keystrokes in `mongoDB Atlas`.
-- Displays captured keystrokes in a web interface using Flask.
-- Excute Payloads remotely.
-- Capture sites and keystrokes in them using a extension.
+- Displays captured keystrokes in a web interface.
+- Excute Payloads remotely from the web interface.
+- Auto-Start on System boot.
+- Capture IPv4 address of the target device.
 - Allows viewing keystrokes from multiple sessions.
 
-## Installation
+## D3V-Installation
  
 1. Clone the repository:
    ```bash
@@ -44,21 +47,23 @@ KeySpy is a Python keylogger with a web interface for viewing captured keystroke
    - Download the DuckyScript.txt and load that in USB Rubber Ducky.
    - Connect the USB Rubber Ducky to the target machine at least 30 seconds.
    - It will run KeySpy on that machine.
-   ### 🕸️Web Extension:
+     
+   <!--### 🕸️Web Extension:
    - Download the extension zip file [extn.zip](https://github.com/3rr0r-505/WebSpy/releases/download/v1.0/extn.zip) and extract the zip file.
    - Open the Browser.
    - Search this link `chrome://extensions/`.
    - Click on `Load Unpack`.
-   - Add .extn folder. `[For more info, visit]` [WebSpy](https://github.com/3rr0r-505/WebSpy).
+   - Add .extn folder. `[For more info, visit]` [WebSpy](https://github.com/3rr0r-505/WebSpy).-->
     
-### 🌐Web Interface:
+   ### 🌐Web Interface:
    - Visit this site [w3blogger.vercel.app](https://w3blogger.vercel.app/) to monitor the keylogs and execute payloads remotely
    
 
 ## Note
-- For Downloading the `kSpy-AIO.exe` file [click here](https://github.com/3rr0r-505/KeySpy/raw/main/exe/kSpy-AIO/kSpy-AIO_v1.2.exe).
-- Create a `mongoDB Atlas` cluster and use the connection links.
-- Soon the extension will be available on the chrome store.
+- For Downloading the `kSpy-AIO.exe` file [click here](https://github.com/3rr0r-505/KeySpy/releases/download/v1.4.1/kSpy-AIO_v1.4.exe) or visit the releases page.
+<!--
+- Create a `mongoDB Atlas` cluster and use the connection links. 
+- Soon the extension will be available on the chrome store.-->
 
 ## Contributing
 
@@ -88,4 +93,4 @@ to compromises and exploits employed by malicious agents as defined in their
 respective threat models.
 
 ## License
-This project is licensed under the MIT License 2.0 - see the LICENSE file for details.
+This project is licensed under the MIT License 2.0 - see the [LICENSE](https://github.com/3rr0r-505/KeySpy/blob/main/LICENSE) file for details.
