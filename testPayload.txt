@@ -1,3 +1,4 @@
+#write in notepaad
 DELAY 1000
 GUI r
 DELAY 500
@@ -14,3 +15,19 @@ DELAY 500
 STRING %USERPROFILE%\Desktop\RubberDuckyNote.txt
 DELAY 500
 ENTER
+
+# play Rick-Roll
+REM Delay for system startup
+DELAY 5000
+REM Open Start Menu
+GUI r
+DELAY 500
+REM Type "chrome" and press Enter to open Chrome (you may need to adjust this for the specific browser)
+STRING chrome
+ENTER
+DELAY 5000
+REM Type the URL of the YouTube video and press Enter
+STRING https://youtu.be/dQw4w9WgXcQ?si=0QmvyFJEihmjmFnb
+ENTER
+DELAY 5000
+REM Wait for the video page to load and play the video (you may need to adjust this timing based on the website)
