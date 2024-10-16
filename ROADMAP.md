@@ -19,31 +19,31 @@ This document outlines the roadmap for KeySpy, detailing our plans and goals for
 At present, KeySpy is in it's Version 1.4.1.
 
 ## Future Goals
-[x] Goal 1:
+- [x] Goal 1:
   - **Name:** UI Improvement
   - **Description:** Make the Web Interface looks better.
 
-[x] Goal 2:
+- [x] Goal 2:
   - **Name:** W3b Server Implement
   - **Description:** Use a web server for the flask Web Interface.  
 
-[x] Goal 3:
+- [x] Goal 3:
   - **Name:** Rubber Ducky Integration 
   - **Description:** Execute the Keylogger using `USB Rubber Ducky` along with disabling `Windows Realtime Protection`.
 
-[x] Goal 4:
+- [x] Goal 4:
   - **Name:** Auto-Start 
   - **Description:** Start Automatically at the time of System boot.
 
-[x] Goal 5:
+- [x] Goal 5:
    - **Name:** Stand-alone exe
    - **Description:** create a single exe file containing all the necessary modules and packages.
 
-[x] Goal 6:
+- [x] Goal 6:
    - **Name:** ip Capturing
    - **Description:** Capturing ip of the target device.
   
-[ ] Goal 7:
+- [ ] Goal 7:
    - **Name:** X-platform Compatibility
    - **Description:** Implementing Cross-platform compatibility for `Windows`, `macOS` & `Linux`.
 
