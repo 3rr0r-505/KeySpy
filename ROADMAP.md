@@ -32,12 +32,12 @@ At present, KeySpy is in it's Version 1.4.1.
   - **Description:** Execute the Keylogger using `USB Rubber Ducky` along with disabling `Windows Realtime Protection`.
 
 - [x] Goal 4:
-  - **Name:** Auto-Start 
-  - **Description:** Start Automatically at the time of System boot.
-
-- [x] Goal 5:
    - **Name:** Stand-alone exe
    - **Description:** create a single exe file containing all the necessary modules and packages.
+
+- [x] Goal 5:
+  - **Name:** Auto-Start 
+  - **Description:** Start Automatically at the time of System boot.
 
 - [x] Goal 6:
    - **Name:** ip Capturing
