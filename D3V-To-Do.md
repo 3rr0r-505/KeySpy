@@ -1,8 +1,8 @@
 # 📋Current Developments Required:
 
-- Goal 1: Host Server.js to remove the necessity of run server.js on localhost to send the data in monogoDB
-- Goal 2: Create a installer which will install python along with the necessary modules. 
-- Goal 3: Single exe file which can run on any Windows Env.
+- Goal 1: Upgrade the web interface to make it more responsive
+- Goal 2: Implementing X-platforms compatibility. 
+- Goal 3: Get a response after payload execution.
 <!--- Goal 4:
 - Goal 5:
 - Goal 6:-->

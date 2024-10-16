@@ -47,7 +47,7 @@ At present, KeySpy is in it's Version 1.4.1.
    - **Name:** X-platform Compatibility
    - **Description:** Implementing Cross-platform compatibility for `Windows`, `macOS` & `Linux`.
 
-⚙️`Note:` To know current Developments; Visit [DEV-ToDo.md](https://github.com/3rr0r-505/KeySpy/blob/main/D3V-ToDo.md). 
+⚙️`Note:` To know current Developments; Visit [DEV-To-Do.md](https://github.com/3rr0r-505/KeySpy/blob/main/D3V-To-Do.md). 
 <!--## Upcoming Features
 - [Feature 1]
   - Description: [Provide a brief description of the feature]
