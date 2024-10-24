@@ -63,7 +63,7 @@ KeySpy is a Python keylogger with a web interface for viewing captured keystroke
 <!--
 - Create a `mongoDB Atlas` cluster and use the connection links. 
 - Soon the extension will be available on the chrome store.-->
- `⚠️ It's a Experimental project inspired by Hak5 OMG & still in development. If you have any queries feel free to DM me on discord.`
+ `⚠️ It's a Experimental project inspired by Hak5 OMG & still in development.`
 
 ## Contributing
 
