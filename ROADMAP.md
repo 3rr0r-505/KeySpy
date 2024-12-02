@@ -43,7 +43,7 @@ At present, KeySpy is in it's Version 1.4.1.
    - **Name:** ip Capturing
    - **Description:** Capturing ip of the target device.
   
-- [ ] Goal 7:
+- [x] Goal 7:
    - **Name:** Add Encryption
    - **Description:** Storing keylogs in encrypted format.
 
@@ -52,6 +52,10 @@ At present, KeySpy is in it's Version 1.4.1.
    - **Description:** Implementing different AV Evasion techniques.
 
 - [ ] Goal 9:
+   - **Name:** Active Targets Recon
+   - **Description:** Reconginizing active targets & Execute payload on selected targets.
+
+- [ ] Goal 10:
    - **Name:** X-platform Compatibility
    - **Description:** Implementing Cross-platform compatibility for `Windows`, `macOS` & `Linux`.
 
