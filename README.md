@@ -59,7 +59,7 @@ KeySpy is a Python keylogger with a web interface for viewing captured keystroke
    - Visit this site [w3blogger.vercel.app](https://w3blogger.vercel.app/) to monitor the keylogs and execute payloads remotely
    
 ## Note
-- For Downloading the `kSpy-AIO.exe` file [click here](https://github.com/3rr0r-505/KeySpy/releases/download/v1.4.1/kSpy-AIO_v1.4.exe) or visit the releases page.
+- For Downloading the `kSpy-AIO.exe` file [click here](https://github.com/3rr0r-505/KeySpy/releases/download/v1.5/kSpy-AIO_v1.5.exe) or visit the releases page.
 <!--
 - Create a `mongoDB Atlas` cluster and use the connection links. 
 - Soon the extension will be available on the chrome store.-->
