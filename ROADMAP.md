@@ -90,7 +90,7 @@ At present, KeySpy is in it's Version 1.4.1.
 ... -->
 
 ## Community Involvement
-We welcome community involvement in shaping the future of NetWhisper. If you'd like to contribute, please see our [Contribution Guidelines](https://github.com/3rr0r-505/KeySpy/blob/main/CONTRIBUTING.md).
+We welcome community involvement in shaping the future of KeySpy. If you'd like to contribute, please see our [Contribution Guidelines](https://github.com/3rr0r-505/KeySpy/blob/main/CONTRIBUTING.md).
 
 ## Contributions Welcome
 We encourage contributions from the community and value your input. If you have ideas or suggestions, please open an issue or submit a pull request.
