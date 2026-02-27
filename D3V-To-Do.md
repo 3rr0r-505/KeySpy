@@ -5,4 +5,4 @@
 - Goal 3: Adding encryption.
 - Goal 4: Applying different Av Evasion techniques. 
 - Goal 5: Implementing X-platforms compatibility.
-
+- Goal 6: Adding Proper Documentation
