@@ -3,5 +3,9 @@ pyscreenshot==2.2
 sounddevice==0.4.2
 pynput==1.7.3
 pygetwindow==0.0.9
-
-pip install pynput pyautogui pygetwindow cryptography pymongo requests
+pynput[standard] 
+pyautogui[standard] 
+pygetwindow[standard] 
+cryptography[standard] 
+pymongo[standard] 
+requests[standard]
